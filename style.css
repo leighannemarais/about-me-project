@@ -104,4 +104,9 @@ p {
   img {
     display: none;
   }
+  .yoga-paragraph,
+  .weather-paragraph,
+  .yogurt-paragraph {
+    text-align: center;
+  }
 }
