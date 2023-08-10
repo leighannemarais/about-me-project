@@ -1,6 +1,7 @@
 :root {
   --primary-color: #6c63ff;
   --secondary-color: #f5f2fe;
+  --primary-font: Ubuntu;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -13,6 +14,7 @@ h2,
 h3 {
   margin: 0;
   display: block;
+  font-family: var(--primary-font);
 }
 
 h1 {
@@ -23,18 +25,33 @@ h2 {
   font-size: 48px;
 }
 
-h3 {
-  font-size: 24px;
-  opacity: 0.7;
-}
-
 p {
   font-size: 18px;
   line-height: 1.5;
 }
 
+.hero {
+  background: var(--secondary-color);
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1,
+.hero h2 {
+  text-transform: uppercase;
+}
+.hero h1 {
+  padding-top: 30px;
+  line-height: 84px;
+  font-weight: bold;
+}
+.hero h2 {
+  padding: 25px;
+  line-height: 28px;
+  font-size: 24px;
+}
 .fixed-top {
   position: fixed;
+  color: var(--secondary-color);
 }
 
 .navigation-links {
@@ -47,23 +64,14 @@ p {
   margin: 20px;
 }
 
-.primary-link {
-  border-radius: 4px;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-transform: capitalize;
+.btn-branding {
   background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  color: white;
-}
-
-.secondary-link {
   border-radius: 4px;
-  padding: 20px 15px;
+  color: white;
   text-decoration: none;
-  text-transform: capitalize;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
 }
 
 .homepage-link {
@@ -101,7 +109,10 @@ p {
   color: white;
 }
 .primary-link:hover {
-  color: white;
+  color: var(--secondary-color);
+}
+.secondary-link:hover {
+  color: var(--primary-color);
 }
 .yoga-paragraph,
 .weather-paragraph,
