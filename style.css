@@ -15,6 +15,7 @@ h3 {
   margin: 0;
   display: block;
   font-family: var(--primary-font);
+  text-transform: uppercase;
 }
 
 h1 {
@@ -28,6 +29,7 @@ h2 {
 p {
   font-size: 18px;
   line-height: 1.5;
+  color: #6c757d;
 }
 
 .hero {
@@ -35,10 +37,7 @@ p {
   text-align: center;
   padding: 80px 20px;
 }
-.hero h1,
-.hero h2 {
-  text-transform: uppercase;
-}
+
 .hero h1 {
   padding-top: 30px;
   line-height: 84px;
@@ -53,7 +52,9 @@ p {
   position: fixed;
   color: var(--secondary-color);
 }
-
+.nav-link {
+  color: var(--primary-color);
+}
 .navigation-links {
   display: flex;
   margin-top: 40px;
@@ -61,19 +62,20 @@ p {
 }
 
 .navigation-links a {
-  margin: 20px;
-}
-
-.btn-branding {
   background: var(--primary-color);
   border-radius: 4px;
-  color: white;
+  color: var(--secondary-color);
   text-decoration: none;
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
 }
-
+.navigation-links a:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  transition: all 150ms ease-in-out;
+  box-shadow: var(--box-shadow);
+}
 .homepage-link {
   color: var(--primary-color);
   text-align: center;
