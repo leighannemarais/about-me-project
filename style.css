@@ -4,6 +4,24 @@
   --primary-font: Ubuntu;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
+nav ul {
+  padding: 0;
+  margin: 0;
+  color: var(--primary-color);
+}
+nav li {
+  display: inline;
+  list-style: none;
+  line-height: 42px;
+  margin-left: 15px;
+  text-decoration: none;
+}
+nav a {
+  text-decoration: none;
+  color: #272142;
+  transition: all 100ms ease-in-out;
+  font-weight: 500;
+}
 
 body {
   margin-bottom: 100px 0;
@@ -34,6 +52,37 @@ p {
   color: #6c757d;
 }
 a {
+  text-align: center;
+}
+footer {
+  margin: 60px 0;
+  background: var(--secondary-color);
+}
+footer h3 {
+  font-size: 20px;
+}
+footer .email-link {
+  color: black;
+  font-weight: 500;
+}
+footer .email-link:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+footer .social-links a {
+  margin: 0 20px 10px 0;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+footer .social-links a:hover {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  transition: all 150ms ease-in-out;
+}
+small {
   text-align: center;
 }
 .hero {
@@ -130,7 +179,9 @@ a {
 .dictionary-paragraph {
   text-align: center;
 }
-
+.bottom-links {
+  font-size: 14px;
+}
 @media (max-width: 600px) {
   h1 {
     font-size: 48px;
