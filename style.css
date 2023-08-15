@@ -1,28 +1,35 @@
 :root {
-  --primary-color: #6c63ff;
+  --primary-color: #bd9479;
   --secondary-color: #f5f2fe;
+  --tertiary-color: #5b4f47;
   --primary-font: Ubuntu;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 nav ul {
+  padding: 0;
   margin: 0;
 }
 nav li {
   display: inline;
   list-style: none;
-  line-height: 42px;
+  line-height: 58px;
   margin-left: 15px;
   text-decoration: none;
 }
+nav .contact {
+  margin-right: 150px;
+}
 nav a {
   text-decoration: none;
-  color: #272142;
+  color: var(--primary-color);
   transition: all 100ms ease-in-out;
   font-weight: 500;
   font-size: 15px;
   text-transform: uppercase;
 }
-
+nav a:hover {
+  color: var(--tertiary-color);
+}
 body {
   margin-bottom: 100px 0;
   font-family: var(--primary-font);
@@ -34,9 +41,9 @@ h3,
 h5 {
   margin: 0;
   display: block;
-  font-family: var(--primary-font);
   text-transform: uppercase;
   text-align: center;
+  color: var(--primary-color);
 }
 
 h2 {
@@ -44,12 +51,11 @@ h2 {
 }
 
 p {
-  font-size: 18px;
   line-height: 30px;
-  color: #6c757d;
   text-align: center;
+  color: var(--tertiary-color);
+  font-weight: bold;
   font-size: 16px;
-  font-weight: 500;
   margin-bottom: 0;
 }
 a {
@@ -58,6 +64,7 @@ a {
 img {
   border-radius: 20px;
 }
+
 footer {
   margin: 60px 0;
 }
@@ -88,26 +95,42 @@ footer .social-links a:hover {
   transition: all 150ms ease-in-out;
 }
 
+footer a {
+  color: var(--tertiary-color);
+  font-weight: 500;
+}
+footer a:hover {
+  color: var(--tertiary-color);
+}
 .hero {
-  background-image: url(../about-me-project/images/blueviolet-wallpaper.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../about-me-project/images/neutral-wallpaper.jpg);
+  background-attachment: fixed;
+  background-size: cover;
   text-align: center;
-  padding: 80px 20px;
+  padding: 110px 20px;
 }
 
 .hero h1 {
-  padding-top: 30px;
-  line-height: 84px;
   font-weight: bold;
   font-size: 64px;
 }
 .hero h2 {
-  padding: 25px;
+  padding-top: 35px;
   line-height: 28px;
   font-size: 24px;
 }
+.hero h5 {
+  font-size: 14px;
+  padding-top: 35px;
+}
+.hero h1,
+.hero h2,
+.hero h5 {
+  color: white;
+}
 .fixed-top {
   position: fixed;
-  color: var(--secondary-color);
 }
 .content-container {
   padding: 60px 20px;
@@ -124,8 +147,7 @@ footer .social-links a:hover {
   font-weight: bold;
 }
 .img-shadow {
-  border: 45px solid #f5f2fe;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 .navigation-links {
   display: flex;
@@ -134,24 +156,31 @@ footer .social-links a:hover {
 }
 
 .navigation-links a {
-  background: var(--primary-color);
-  border-radius: 4px;
-  color: var(--secondary-color);
+  background: white;
+  border-radius: 50px;
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
   font-weight: 500;
+  border: 1px solid var(--primary-color);
 }
 .navigation-links a:hover {
-  color: var(--primary-color);
-  background: var(--secondary-color);
+  color: white;
+  background: var(--primary-color);
   transition: all 150ms ease-in-out;
   box-shadow: var(--box-shadow);
 }
-.text-muted {
-  opacity: 1;
-  color: #6c757d;
+.logo {
+  max-height: 80px;
+  border-radius: 0%;
+  margin-left: 150px;
+}
+.age {
+  color: var(--tertiary-color);
+  font-size: 14px;
+  font-style: italic;
 }
 .homepage-link {
   color: var(--primary-color);
@@ -161,6 +190,7 @@ footer .social-links a:hover {
 .container {
   width: 100%;
 }
+
 .about-paragraphs {
   margin: 30px 0;
 }
@@ -179,23 +209,26 @@ footer .social-links a:hover {
 
 .email-link:hover {
   text-decoration: underline;
+  color: var(--tertiary-color);
 }
 .primary-link {
-  border-radius: 4px;
+  border-radius: 35px;
   padding: 15px 28px;
   text-decoration: none;
   text-transform: capitalize;
-  background: var(--secondaary-color);
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 16px;
   line-height: 27px;
   font-weight: 600;
+  display: inline-block;
 }
 .primary-link:hover {
-  color: var(--secondary-color);
-  background: var(--primary-color);
+  border: var(--primary-color);
+  color: var(--primary-color);
+  background: white;
   transition: all 150ms ease-in-out;
+  border: 1px solid var(--primary-color);
 }
 .img-fluid {
   max-width: 100%;
@@ -205,6 +238,7 @@ footer .social-links a:hover {
   text-align: center;
   padding: 100px 60px;
 }
+
 .bottom-links {
   font-size: 14px;
   margin: 0 auto;
@@ -227,6 +261,10 @@ footer .social-links a:hover {
     text-align: center;
     font-size: 12px;
     margin: 0 auto;
+  }
+  .primary-link {
+    font-size: 12px;
+    padding: 7px 12px;
   }
   .project-link {
     display: block;
